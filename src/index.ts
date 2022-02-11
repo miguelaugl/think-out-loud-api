@@ -9,6 +9,9 @@ const HTTP_SERVER_PORT = 3333
 
 const app = express()
 app.use(cors())
+app.get('/', (req, res) => {
+  return res.json('Welcome to Think Out Loud Api')
+})
 const httpServer = http.createServer(app)
 
 createSocket(httpServer)
